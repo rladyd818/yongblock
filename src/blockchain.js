@@ -50,10 +50,12 @@ const createNewBlock = data => {
     newTimestamp,
     data
   );
+  addBlockToChain(newBlock);
   return newBlock;
 };
 
-const getBlockHash = (block) => createHash(block.index, block.previousHash, block.timestamp, block.data);
+const getBlockHash = block =>
+  createHash(block.index, block.previousHash, block.timestamp, block.data);
 
 const isNewBlockValid = (candidateBlock, latestBlock) => {
   if(!isNewStructureValid(candidateBlock)){
@@ -116,9 +118,14 @@ const replaceChain = newChain => {
 };
 const addBlockToChain = candidateBlock => {
   if(isNewBlockValid(candidateBlock, getLastBlock())){
-    blockchain.push(candidateBlock);
+    getBlockchain().push(candidateBlock);
     return true;
   } else {
     return false;
   }
+};
+
+module.exports = {
+  getBlockchain,
+  createNewBlock
 };
