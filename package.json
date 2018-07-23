@@ -1,0 +1,13 @@
+{
+  "name": "yongblock",
+  "version": "1.0.0",
+  "description": "study",
+  "main": "src/server.js",
+  "repository": "https://github.com/rladyd818/yongblock",
+  "author": "rladyd818 <40626483+rladyd818@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
+}
