@@ -1,0 +1,20 @@
+{
+  "name": "yongblock",
+  "version": "1.0.0",
+  "description": "study",
+  "main": "src/server.js",
+  "repository": "https://github.com/rladyd818/yongblock",
+  "author": "rladyd818 <40626483+rladyd818@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "ws": "^5.2.2"
+  },
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  }
+}
